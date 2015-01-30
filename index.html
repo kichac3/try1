@@ -28,8 +28,9 @@
             states[Connection.CELL_4G]  = 'Cell 4G connection';
             states[Connection.CELL]     = 'Cell generic connection';
             states[Connection.NONE]     = 'No network connection';
+var div = document.getElementById('myDiv1');
 
-            alert('Connection type: ' + states[networkState]);
+        div.innerHTML = 'Connection type: ' + states[networkState];
         }
 
     // Display `Position` properties from the geolocation
@@ -55,6 +56,9 @@
     </script>
   </head>
   <body>
+  Kicha
     <div id="myDiv"></div>
+    <p></p>
+    <div id="myDiv1"></div>
   </body>
 </html>
