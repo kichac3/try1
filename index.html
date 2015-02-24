@@ -1,8 +1,30 @@
-<html></html>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Hi Kicha!</h3>
+To Display Images...
+<form>
+<input type="text" id="info" value="toy" onblur="myFunction();"/>
+</form>
 
-    <p>Hi Kicha!</p>
-   
-  </body>
+<script>
+function myFunction() {
+
+var xif = document.getElementById("ifrm");
+
+var xv = document.getElementById("info").value;
+
+var x;
+if (xif == null){
+    x = document.createElement("IFRAME");
+ }else{
+  x=xif;
+}
+x.setAttribute("id","ifrm");
+    x.setAttribute("src", "http://flickrit.com/slideshowholder.php?height=100&size=big&keyword="+xv);
+    document.body.appendChild(x);
+}
+</script>
+
+</body>
 </html>
