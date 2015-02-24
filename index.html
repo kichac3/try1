@@ -1,64 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Geolocation Position Example</title>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-     checkConnection();
-    }
-
-        function checkConnection() {
-            var networkState = navigator.connection.type;
-
-            var states = {};
-            states[Connection.UNKNOWN]  = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI]     = 'WiFi connection';
-            states[Connection.CELL_2G]  = 'Cell 2G connection';
-            states[Connection.CELL_3G]  = 'Cell 3G connection';
-            states[Connection.CELL_4G]  = 'Cell 4G connection';
-            states[Connection.CELL]     = 'Cell generic connection';
-            states[Connection.NONE]     = 'No network connection';
-var div = document.getElementById('myDiv1');
-
-        div.innerHTML = 'Connection type: ' + states[networkState];
-        }
-
-    // Display `Position` properties from the geolocation
-    //
-    function onSuccess(position) {
-        var div = document.getElementById('myDiv');
-
-        div.innerHTML = 'Latitude: '             + position.coords.latitude         + '<br/>' +
-                        'Longitude: '            + position.coords.longitude        + '<br/>' +
-                        'Altitude: '             + position.coords.altitude         + '<br/>' +
-                        'Accuracy: '             + position.coords.accuracy         + '<br/>' +
-                        'Altitude Accuracy: '    + position.coords.altitudeAccuracy + '<br/>' +
-                        'Heading: '              + position.coords.heading          + '<br/>' +
-                        'Speed: '                + position.coords.speed            + '<br/>';
-    }
-
-    // Show an alert if there is a problem getting the geolocation
-    //
-    function onError() {
-        alert('onError!');
-    }
-
-    </script>
+<html></html>
   </head>
   <body>
-  Kicha
-    <div id="myDiv"></div>
-    <p></p>
-    <div id="myDiv1"></div>
+
+    <p>Hi Kicha!</p>
+   
   </body>
 </html>
